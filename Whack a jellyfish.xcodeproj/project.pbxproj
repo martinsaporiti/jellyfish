@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		291260F520A111B9009717FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291260F420A111B9009717FC /* AppDelegate.swift */; };
+		291260F720A111B9009717FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291260F620A111B9009717FC /* ViewController.swift */; };
+		291260FA20A111B9009717FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291260F820A111B9009717FC /* Main.storyboard */; };
+		291260FC20A111BA009717FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291260FB20A111BA009717FC /* Assets.xcassets */; };
+		291260FF20A111BA009717FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291260FD20A111BA009717FC /* LaunchScreen.storyboard */; };
+		2912610A20A111BB009717FC /* Whack_a_jellyfishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2912610920A111BA009717FC /* Whack_a_jellyfishTests.swift */; };
+		2912611520A111BB009717FC /* Whack_a_jellyfishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2912611420A111BB009717FC /* Whack_a_jellyfishUITests.swift */; };
+		2912612520A12006009717FC /* Textures in Resources */ = {isa = PBXBuildFile; fileRef = 2912612420A12006009717FC /* Textures */; };
+		2912612820A135F2009717FC /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2912612720A135F2009717FC /* art.scnassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2912610620A111BA009717FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 291260E920A111B9009717FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 291260F020A111B9009717FC;
+			remoteInfo = "Whack a jellyfish";
+		};
+		2912611120A111BB009717FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 291260E920A111B9009717FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 291260F020A111B9009717FC;
+			remoteInfo = "Whack a jellyfish";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		291260F120A111B9009717FC /* Whack a jellyfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whack a jellyfish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		291260F420A111B9009717FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		291260F620A111B9009717FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		291260F920A111B9009717FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		291260FB20A111BA009717FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		291260FE20A111BA009717FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2912610020A111BA009717FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2912610520A111BA009717FC /* Whack a jellyfishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Whack a jellyfishTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2912610920A111BA009717FC /* Whack_a_jellyfishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whack_a_jellyfishTests.swift; sourceTree = "<group>"; };
+		2912610B20A111BB009717FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2912611020A111BB009717FC /* Whack a jellyfishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Whack a jellyfishUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2912611420A111BB009717FC /* Whack_a_jellyfishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whack_a_jellyfishUITests.swift; sourceTree = "<group>"; };
+		2912611620A111BB009717FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2912612420A12006009717FC /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textures; sourceTree = "<group>"; };
+		2912612720A135F2009717FC /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		291260EE20A111B9009717FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2912610220A111BA009717FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2912610D20A111BB009717FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		291260E820A111B9009717FC = {
+			isa = PBXGroup;
+			children = (
+				291260F320A111B9009717FC /* Whack a jellyfish */,
+				2912610820A111BA009717FC /* Whack a jellyfishTests */,
+				2912611320A111BB009717FC /* Whack a jellyfishUITests */,
+				291260F220A111B9009717FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		291260F220A111B9009717FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				291260F120A111B9009717FC /* Whack a jellyfish.app */,
+				2912610520A111BA009717FC /* Whack a jellyfishTests.xctest */,
+				2912611020A111BB009717FC /* Whack a jellyfishUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		291260F320A111B9009717FC /* Whack a jellyfish */ = {
+			isa = PBXGroup;
+			children = (
+				2912612420A12006009717FC /* Textures */,
+				291260F420A111B9009717FC /* AppDelegate.swift */,
+				291260F620A111B9009717FC /* ViewController.swift */,
+				291260F820A111B9009717FC /* Main.storyboard */,
+				291260FB20A111BA009717FC /* Assets.xcassets */,
+				291260FD20A111BA009717FC /* LaunchScreen.storyboard */,
+				2912610020A111BA009717FC /* Info.plist */,
+				2912612720A135F2009717FC /* art.scnassets */,
+			);
+			path = "Whack a jellyfish";
+			sourceTree = "<group>";
+		};
+		2912610820A111BA009717FC /* Whack a jellyfishTests */ = {
+			isa = PBXGroup;
+			children = (
+				2912610920A111BA009717FC /* Whack_a_jellyfishTests.swift */,
+				2912610B20A111BB009717FC /* Info.plist */,
+			);
+			path = "Whack a jellyfishTests";
+			sourceTree = "<group>";
+		};
+		2912611320A111BB009717FC /* Whack a jellyfishUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2912611420A111BB009717FC /* Whack_a_jellyfishUITests.swift */,
+				2912611620A111BB009717FC /* Info.plist */,
+			);
+			path = "Whack a jellyfishUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		291260F020A111B9009717FC /* Whack a jellyfish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2912611920A111BB009717FC /* Build configuration list for PBXNativeTarget "Whack a jellyfish" */;
+			buildPhases = (
+				291260ED20A111B9009717FC /* Sources */,
+				291260EE20A111B9009717FC /* Frameworks */,
+				291260EF20A111B9009717FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Whack a jellyfish";
+			productName = "Whack a jellyfish";
+			productReference = 291260F120A111B9009717FC /* Whack a jellyfish.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2912610420A111BA009717FC /* Whack a jellyfishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2912611C20A111BB009717FC /* Build configuration list for PBXNativeTarget "Whack a jellyfishTests" */;
+			buildPhases = (
+				2912610120A111BA009717FC /* Sources */,
+				2912610220A111BA009717FC /* Frameworks */,
+				2912610320A111BA009717FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2912610720A111BA009717FC /* PBXTargetDependency */,
+			);
+			name = "Whack a jellyfishTests";
+			productName = "Whack a jellyfishTests";
+			productReference = 2912610520A111BA009717FC /* Whack a jellyfishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2912610F20A111BB009717FC /* Whack a jellyfishUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2912611F20A111BB009717FC /* Build configuration list for PBXNativeTarget "Whack a jellyfishUITests" */;
+			buildPhases = (
+				2912610C20A111BB009717FC /* Sources */,
+				2912610D20A111BB009717FC /* Frameworks */,
+				2912610E20A111BB009717FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2912611220A111BB009717FC /* PBXTargetDependency */,
+			);
+			name = "Whack a jellyfishUITests";
+			productName = "Whack a jellyfishUITests";
+			productReference = 2912611020A111BB009717FC /* Whack a jellyfishUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		291260E920A111B9009717FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Martin Saporiti";
+				TargetAttributes = {
+					291260F020A111B9009717FC = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					2912610420A111BA009717FC = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 291260F020A111B9009717FC;
+					};
+					2912610F20A111BB009717FC = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 291260F020A111B9009717FC;
+					};
+				};
+			};
+			buildConfigurationList = 291260EC20A111B9009717FC /* Build configuration list for PBXProject "Whack a jellyfish" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 291260E820A111B9009717FC;
+			productRefGroup = 291260F220A111B9009717FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				291260F020A111B9009717FC /* Whack a jellyfish */,
+				2912610420A111BA009717FC /* Whack a jellyfishTests */,
+				2912610F20A111BB009717FC /* Whack a jellyfishUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		291260EF20A111B9009717FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				291260FF20A111BA009717FC /* LaunchScreen.storyboard in Resources */,
+				291260FC20A111BA009717FC /* Assets.xcassets in Resources */,
+				2912612820A135F2009717FC /* art.scnassets in Resources */,
+				2912612520A12006009717FC /* Textures in Resources */,
+				291260FA20A111B9009717FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2912610320A111BA009717FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2912610E20A111BB009717FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		291260ED20A111B9009717FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				291260F720A111B9009717FC /* ViewController.swift in Sources */,
+				291260F520A111B9009717FC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2912610120A111BA009717FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2912610A20A111BB009717FC /* Whack_a_jellyfishTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2912610C20A111BB009717FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2912611520A111BB009717FC /* Whack_a_jellyfishUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2912610720A111BA009717FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 291260F020A111B9009717FC /* Whack a jellyfish */;
+			targetProxy = 2912610620A111BA009717FC /* PBXContainerItemProxy */;
+		};
+		2912611220A111BB009717FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 291260F020A111B9009717FC /* Whack a jellyfish */;
+			targetProxy = 2912611120A111BB009717FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		291260F820A111B9009717FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				291260F920A111B9009717FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		291260FD20A111BA009717FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				291260FE20A111BA009717FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2912611720A111BB009717FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2912611820A111BB009717FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2912611A20A111BB009717FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZ34D2LM93;
+				INFOPLIST_FILE = "Whack a jellyfish/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfish";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2912611B20A111BB009717FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZ34D2LM93;
+				INFOPLIST_FILE = "Whack a jellyfish/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfish";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2912611D20A111BB009717FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZ34D2LM93;
+				INFOPLIST_FILE = "Whack a jellyfishTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfishTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whack a jellyfish.app/Whack a jellyfish";
+			};
+			name = Debug;
+		};
+		2912611E20A111BB009717FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZ34D2LM93;
+				INFOPLIST_FILE = "Whack a jellyfishTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfishTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whack a jellyfish.app/Whack a jellyfish";
+			};
+			name = Release;
+		};
+		2912612020A111BB009717FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZ34D2LM93;
+				INFOPLIST_FILE = "Whack a jellyfishUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfishUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Whack a jellyfish";
+			};
+			name = Debug;
+		};
+		2912612120A111BB009717FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZ34D2LM93;
+				INFOPLIST_FILE = "Whack a jellyfishUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfishUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Whack a jellyfish";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		291260EC20A111B9009717FC /* Build configuration list for PBXProject "Whack a jellyfish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2912611720A111BB009717FC /* Debug */,
+				2912611820A111BB009717FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2912611920A111BB009717FC /* Build configuration list for PBXNativeTarget "Whack a jellyfish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2912611A20A111BB009717FC /* Debug */,
+				2912611B20A111BB009717FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2912611C20A111BB009717FC /* Build configuration list for PBXNativeTarget "Whack a jellyfishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2912611D20A111BB009717FC /* Debug */,
+				2912611E20A111BB009717FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2912611F20A111BB009717FC /* Build configuration list for PBXNativeTarget "Whack a jellyfishUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2912612020A111BB009717FC /* Debug */,
+				2912612120A111BB009717FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 291260E920A111B9009717FC /* Project object */;
+}
