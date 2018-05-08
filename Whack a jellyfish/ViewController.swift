@@ -8,8 +8,14 @@
 
 import UIKit
 import ARKit
+import Each
 class ViewController: UIViewController {
 
+    var timer = Each(1).seconds
+    var countdown = 10
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    
     @IBOutlet weak var sceneView: ARSCNView!
     
     @IBOutlet weak var playButton: UIButton!
@@ -34,6 +40,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func play(_ sender: Any) {
+        self.setTimer()
         self.addNode()
         self.playButton.isEnabled = false
     }
@@ -41,7 +48,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func reset(_ sender: Any) {
-    
+        self.timer.stop()
+        self.restoreTimer()
+        self.playButton.isEnabled = true
+        
+        sceneView.scene.rootNode.enumerateChildNodes{ (node, _) in
+            node.removeFromParentNode()
+        }
     }
     
     
@@ -58,7 +71,7 @@ class ViewController: UIViewController {
         
         let jellyFishScene = SCNScene(named: "art.scnassets/Jellyfish.scn")
         let jellyFishNode = jellyFishScene?.rootNode.childNode(withName: "jellyfish", recursively: false)
-        jellyFishNode?.position = SCNVector3(0, 0, -1)
+        jellyFishNode?.position = SCNVector3(self.randomNumbers(firstNum: -1, secondNum: 1), self.randomNumbers(firstNum: -0.5, secondNum: 0.5), self.randomNumbers(firstNum: -1, secondNum: 1))
         self.sceneView.scene.rootNode.addChildNode(jellyFishNode!)
     }
     
@@ -82,15 +95,22 @@ class ViewController: UIViewController {
         if(hitTest.isEmpty){
             print(("didn't tocuh anything"))
         } else {
-            let results = hitTest.first!
-            let node = results.node
-            
-            // Se valida que no esté ejecutando una animación previa
-            if(node.animationKeys.isEmpty){
-                self.animateNode(node: node)
+            if countdown > 0 {
+                let results = hitTest.first!
+                let node = results.node
+                
+                // Se valida que no esté ejecutando una animación previa
+                if(node.animationKeys.isEmpty){
+                    SCNTransaction.begin()
+                    self.animateNode(node: node)
+                    SCNTransaction.completionBlock = {
+                        node.removeFromParentNode()
+                        self.addNode()
+                        self.restoreTimer()
+                    }
+                    SCNTransaction.commit()
+                }
             }
-            
-
         }
     }
     
@@ -113,5 +133,31 @@ class ViewController: UIViewController {
         spin.autoreverses = true
         node.addAnimation(spin, forKey: "position")
     }
+ 
+    
+    func setTimer(){
+        self.timer.perform{ () -> NextStep in
+            self.countdown -= 1
+            self.timerLabel.text = String(self.countdown)
+            if self.countdown == 0{
+                self.timerLabel.text = "You Lose"
+                return .stop
+            } else {
+                return .continue
+            }
+        }
+    }
+    
+    
+    func restoreTimer(){
+        self.countdown = 10
+        self.timerLabel.text = String(self.countdown)
+    }
+    
+    func randomNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
+    }
 }
+
+
 

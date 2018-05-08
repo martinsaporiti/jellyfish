@@ -16,6 +16,7 @@
 		2912611520A111BB009717FC /* Whack_a_jellyfishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2912611420A111BB009717FC /* Whack_a_jellyfishUITests.swift */; };
 		2912612520A12006009717FC /* Textures in Resources */ = {isa = PBXBuildFile; fileRef = 2912612420A12006009717FC /* Textures */; };
 		2912612820A135F2009717FC /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2912612720A135F2009717FC /* art.scnassets */; };
+		AF8882F5BB2C74A4D84FEC4E /* Pods_Whack_a_jellyfish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2C0FEA4782FED28CD46C6E /* Pods_Whack_a_jellyfish.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19F64C4C4C61D6962919B107 /* Pods-Whack a jellyfish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whack a jellyfish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whack a jellyfish/Pods-Whack a jellyfish.release.xcconfig"; sourceTree = "<group>"; };
 		291260F120A111B9009717FC /* Whack a jellyfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whack a jellyfish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		291260F420A111B9009717FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		291260F620A111B9009717FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		2912611620A111BB009717FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2912612420A12006009717FC /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textures; sourceTree = "<group>"; };
 		2912612720A135F2009717FC /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		8F2C0FEA4782FED28CD46C6E /* Pods_Whack_a_jellyfish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whack_a_jellyfish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8516DC84D087443DC997D5D /* Pods-Whack a jellyfish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whack a jellyfish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whack a jellyfish/Pods-Whack a jellyfish.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8882F5BB2C74A4D84FEC4E /* Pods_Whack_a_jellyfish.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				2912610820A111BA009717FC /* Whack a jellyfishTests */,
 				2912611320A111BB009717FC /* Whack a jellyfishUITests */,
 				291260F220A111B9009717FC /* Products */,
+				E1157AF6DA2C79E8F6622E93 /* Pods */,
+				6B8916673BBC63DE94FD16C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +138,23 @@
 			path = "Whack a jellyfishUITests";
 			sourceTree = "<group>";
 		};
+		6B8916673BBC63DE94FD16C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F2C0FEA4782FED28CD46C6E /* Pods_Whack_a_jellyfish.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1157AF6DA2C79E8F6622E93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8516DC84D087443DC997D5D /* Pods-Whack a jellyfish.debug.xcconfig */,
+				19F64C4C4C61D6962919B107 /* Pods-Whack a jellyfish.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2912611920A111BB009717FC /* Build configuration list for PBXNativeTarget "Whack a jellyfish" */;
 			buildPhases = (
+				9D12458366DEBBF7F698ADC4 /* [CP] Check Pods Manifest.lock */,
 				291260ED20A111B9009717FC /* Sources */,
 				291260EE20A111B9009717FC /* Frameworks */,
 				291260EF20A111B9009717FC /* Resources */,
+				C36220270812F30D421CBB70 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,6 +284,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D12458366DEBBF7F698ADC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whack a jellyfish-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C36220270812F30D421CBB70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Whack a jellyfish/Pods-Whack a jellyfish-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Each/Each.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Each.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whack a jellyfish/Pods-Whack a jellyfish-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		291260ED20A111B9009717FC /* Sources */ = {
@@ -436,15 +501,13 @@
 		};
 		2912611A20A111BB009717FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8516DC84D087443DC997D5D /* Pods-Whack a jellyfish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZ34D2LM93;
 				INFOPLIST_FILE = "Whack a jellyfish/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -454,15 +517,13 @@
 		};
 		2912611B20A111BB009717FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19F64C4C4C61D6962919B107 /* Pods-Whack a jellyfish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZ34D2LM93;
 				INFOPLIST_FILE = "Whack a jellyfish/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfish";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -478,11 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZ34D2LM93;
 				INFOPLIST_FILE = "Whack a jellyfishTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfishTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -499,11 +556,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZ34D2LM93;
 				INFOPLIST_FILE = "Whack a jellyfishTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfishTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -519,11 +572,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZ34D2LM93;
 				INFOPLIST_FILE = "Whack a jellyfishUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfishUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -539,11 +588,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZ34D2LM93;
 				INFOPLIST_FILE = "Whack a jellyfishUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxit.Whack-a-jellyfishUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
