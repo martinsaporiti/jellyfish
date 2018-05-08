@@ -11,10 +11,17 @@ import ARKit
 import Each
 class ViewController: UIViewController {
 
+   
+    
+    let seconds : Int = 10
+    let node_name = "jelly"
+    
     var timer = Each(1).seconds
-    var countdown = 10
+    var countdown : Int = 10
+    var score = 0
     
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var labelScore: UILabel!
     
     @IBOutlet weak var sceneView: ARSCNView!
     
@@ -29,9 +36,11 @@ class ViewController: UIViewController {
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints,
                                        ARSCNDebugOptions.showWorldOrigin]
         self.sceneView.session.run(configuration);
+        self.restoreTimer()
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         self.sceneView.addGestureRecognizer(tapGestureRecognizer)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +50,10 @@ class ViewController: UIViewController {
 
     @IBAction func play(_ sender: Any) {
         self.setTimer()
+        self.initScore()
         self.addNode()
+        let count = self.sceneView.scene.rootNode.childNodes.count
+        print("cantidad de nodos en el play", count)
         self.playButton.isEnabled = false
     }
     
@@ -51,10 +63,19 @@ class ViewController: UIViewController {
         self.timer.stop()
         self.restoreTimer()
         self.playButton.isEnabled = true
-        
-        sceneView.scene.rootNode.enumerateChildNodes{ (node, _) in
+        self.sceneView.scene.rootNode.enumerateChildNodes{ (node, _) in
             node.removeFromParentNode()
         }
+    }
+    
+    func initScore(){
+        self.score = 0
+        self.labelScore.text = String(self.score)
+    }
+    
+    func addPoint(){
+        self.score += 1
+        self.labelScore.text = String(self.score)
     }
     
     
@@ -63,15 +84,10 @@ class ViewController: UIViewController {
      
     */
     func addNode(){
-//        let node = SCNNode(geometry: SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0))
-//        node.position = SCNVector3(0, 0, -1)
-//        node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
-//        node.name = "Sapo"
-//        self.sceneView.scene.rootNode.addChildNode(node)
-        
         let jellyFishScene = SCNScene(named: "art.scnassets/Jellyfish.scn")
         let jellyFishNode = jellyFishScene?.rootNode.childNode(withName: "jellyfish", recursively: false)
         jellyFishNode?.position = SCNVector3(self.randomNumbers(firstNum: -1, secondNum: 1), self.randomNumbers(firstNum: -0.5, secondNum: 0.5), self.randomNumbers(firstNum: -1, secondNum: 1))
+        jellyFishNode?.name = self.node_name
         self.sceneView.scene.rootNode.addChildNode(jellyFishNode!)
     }
     
@@ -84,31 +100,41 @@ class ViewController: UIViewController {
     */
     @objc func handleTap(sender: UITapGestureRecognizer){
         
-        // Aquí validamos que la positicón si se hizo "tap" sobre la medusa.
-        let sceneViewTappedOn = sender.view as! SCNView
-        let touchCoordinates = sender.location(in: sceneViewTappedOn)
-        // hitest tendra información sobre el objeto que se encontraba en la posición
-        // sobre la que se hizo tap.
-        let hitTest = sceneViewTappedOn.hitTest(touchCoordinates)
+        if (sender.state == UIGestureRecognizerState.ended){
         
-        
-        if(hitTest.isEmpty){
-            print(("didn't tocuh anything"))
-        } else {
-            if countdown > 0 {
-                let results = hitTest.first!
-                let node = results.node
-                
-                // Se valida que no esté ejecutando una animación previa
-                if(node.animationKeys.isEmpty){
-                    SCNTransaction.begin()
-                    self.animateNode(node: node)
-                    SCNTransaction.completionBlock = {
-                        node.removeFromParentNode()
-                        self.addNode()
-                        self.restoreTimer()
+            if (playButton.isEnabled == false) {
+                // Aquí validamos que la positicón si se hizo "tap" sobre la medusa.
+                let sceneViewTappedOn = sender.view as! SCNView
+                let touchCoordinates = sender.location(in: sceneViewTappedOn)
+                // hitest tendra información sobre el objeto que se encontraba en la posición
+                // sobre la que se hizo tap.
+                let hitTest = sceneViewTappedOn.hitTest(touchCoordinates)
+
+                let count = self.sceneView.scene.rootNode.childNodes.count
+                if(hitTest.isEmpty){
+                    print(("didn't tocuh anything"))
+                    print("cantidad de nodos", count)
+                } else {
+                    if countdown > 0 {
+                        let results = hitTest.first!
+                        let node = results.node
+                        if(node.name == self.node_name){
+                            print("cantidad de nodos por el else", count)
+                            // Se valida que no esté ejecutando una animación previa
+                            if(node.animationKeys.isEmpty){
+                                SCNTransaction.begin()
+                                self.animateNode(node: node)
+
+                                SCNTransaction.completionBlock = {
+                                    self.addPoint()
+                                    node.removeFromParentNode()
+                                    self.addNode()
+                                    self.restoreTimer()
+                                }
+                                SCNTransaction.commit()
+                            }
+                        }
                     }
-                    SCNTransaction.commit()
                 }
             }
         }
@@ -150,7 +176,7 @@ class ViewController: UIViewController {
     
     
     func restoreTimer(){
-        self.countdown = 10
+        self.countdown = self.seconds
         self.timerLabel.text = String(self.countdown)
     }
     
